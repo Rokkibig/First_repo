@@ -1,0 +1,2 @@
+class ComplianceMonitor:
+    pass

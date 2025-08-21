@@ -1,0 +1,2 @@
+class LegalAnalyst:
+    pass
