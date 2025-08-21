@@ -1,0 +1,2 @@
+class DueDiligenceAgent:
+    pass

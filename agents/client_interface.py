@@ -1,0 +1,2 @@
+class ClientInterfaceAgent:
+    pass

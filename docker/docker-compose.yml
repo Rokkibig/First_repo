@@ -1,0 +1,46 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://legal:password@postgres:5432/legal_db
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - postgres
+      - redis
+    volumes:
+      - ./data:/app/data
+      - ./logs:/app/logs
+
+  postgres:
+    image: postgres:15
+    environment:
+      POSTGRES_DB: legal_db
+      POSTGRES_USER: legal
+      POSTGRES_PASSWORD: password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+  chroma:
+    image: chromadb/chroma:latest
+    ports:
+      - "8001:8000"
+    volumes:
+      - chroma_data:/chroma/chroma
+
+volumes:
+  postgres_data:
+  redis_data:
+  chroma_data:
