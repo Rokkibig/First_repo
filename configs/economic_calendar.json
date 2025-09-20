@@ -1,0 +1,17 @@
+{
+  "provider": "mock-calendar",
+  "metadata": {
+    "events": [
+      {
+        "timestamp": "2023-01-01T07:00:00+00:00",
+        "event": "Manufacturing PMI",
+        "importance": "medium"
+      },
+      {
+        "timestamp": "2023-01-01T09:30:00+00:00",
+        "event": "Unemployment Rate",
+        "importance": "high"
+      }
+    ]
+  }
+}

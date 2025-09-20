@@ -1,0 +1,5 @@
+{
+  "api_key": "YOUR_ALPHA_VANTAGE_KEY",
+  "symbol": "SPY",
+  "mock_price": 400.0
+}
