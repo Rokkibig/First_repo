@@ -1,0 +1,5 @@
+{
+  "api_key": "YOUR_TWELVE_DATA_KEY",
+  "instruments": ["EUR/USD", "GBP/USD"],
+  "mock_quote": 1.08
+}
